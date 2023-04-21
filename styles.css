@@ -1,0 +1,12 @@
+body {
+    background-color: orange;
+}
+
+.ATM {
+    font-size: 5em;
+}
+
+.label {
+    font-size: 1.3em;
+    display: inline-block;
+}
