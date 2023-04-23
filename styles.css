@@ -1,12 +1,84 @@
-body {
-    background-color: orange;
+
+
+.container {
+    background-color: rgb(203, 209, 231);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 30px;
+    border: 30px solid rgb(58, 170, 58);
+    border-radius: 5%;
+
+}
+.box {
+    padding: 3em;
+    border: 2em solid rgb(63, 48, 222);
+    border-radius: 5%;
+    width: 100%;
+    max-width: 800px;
+    background-color: rgb(53, 142, 37);
+    box-shadow: 1em 1em 1em rgba(0, 0, 0, 0.614);
 }
 
-.ATM {
-    font-size: 5em;
+.machine {
+    font-size: 3em;
+    font-style: italic;
+    font-weight: bold;
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 10px;
+    color: aliceblue;
+    background-color: rgb(31, 39, 129);
+    box-shadow: .2em .2em .5em rgba(0, 0, 0, 0.614);
 }
 
 .label {
     font-size: 1.3em;
-    display: inline-block;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+    color: aliceblue
+    ;
+}
+.form-select {
+    display: block;
+    width: 100%;
+    color: rgb(0, 0, 0);
+
+}
+.input[type="number"] {
+    display: block;
+    border: 1px solid rgb(202, 239, 212);
+
+}
+.status {
+    display: block;
+    font-size: 1.5em;
+    margin-bottom: 2em;
+    font-weight: bold ;
+    text-align: center;
+    padding: 30px;
+    color: aliceblue;
+}
+input[type="submit"] {
+    background-color: rgb(57, 80, 60);
+    border: 5px solid rgb(4, 29, 4);
+    color: aquamarine;
+    border-radius: 10%;
+    display: block;
+    margin-top: 20px;
+    padding: 5px;
+    font-size: 1.2em;
+    width: 100%;
+    
+}
+.btn {
+    width: 100%;
+    font-size: 2em;
+}
+.btn-primary {
+    font-size: 2em;
 }

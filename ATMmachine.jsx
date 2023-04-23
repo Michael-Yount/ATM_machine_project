@@ -4,9 +4,12 @@ const ATMDeposit = ({ onChange, isDeposit, isValid }) => {
     console.log(`ATM isDeposit: ${isDeposit}`);
     return (
       <label className="label huge">
-        <h3> {choice[Number(!isDeposit)]}</h3>
-        <input type="number" width="100" onChange={onChange}></input>
-        <input type="submit" disabled={!isValid} width="100" value="Submit"></input>
+        <h3 className="mt-3"> {choice[Number(!isDeposit)]}</h3>
+        <div>
+        <input className="form-control" placeholder="enter amount" type="number" width="100" onChange={onChange}></input>
+        <button class="btn btn-primary ml-2" type="submit" disabled={!isValid} width="100" value="Submit">Submit</button>
+
+        </div>
       </label>
     );
   };
@@ -51,24 +54,24 @@ const ATMDeposit = ({ onChange, isDeposit, isValid }) => {
     };
   
     return (
-      <form onSubmit={handleSubmit}>
-        
-        <div className="machine">
-        <h2 id="total">{status}</h2>
-        <label className="label col">Select an action to contue</label>
-        <select className="col" onChange={(e) => handleModeSelect(e)} name="mode" id="mode- select">
-          Select
-          <option id="no-selection" value=""></option>
-          <option id="deposit-selection" value="Deposit">Deposit</option>
-          <option id="withdraw-selection" value="Withdraw">Withdraw</option>
-        </select>
-        {atmMode && (<ATMDeposit 
-        onChange={handleChange} 
-        isDeposit={isDeposit}
-        isValid={validTransaction}
-        ></ATMDeposit>
-        )}
-        
+      <form onSubmit={handleSubmit}> 
+        <div>
+          <div className="machine">
+            CASH MACHINE</div>
+              <h2 className="status" id="total">{status}</h2>
+              <label className="label">Select an action to continue</label>
+                <select class="form-select form-select-lg mb-3 btn-outline-success" aria-label=".form-select-lg example" onChange={(e) => handleModeSelect(e)} name="mode" id="mode- select">
+                  Select
+                    <option id="no-selection" value=""></option>
+                    <option id="deposit-selection" value="Deposit">Deposit</option>
+                    <option id="withdraw-selection" value="Withdraw">Withdraw</option>
+                  </select>
+                    {atmMode && (<ATMDeposit 
+                      onChange={handleChange} 
+                      isDeposit={isDeposit}
+                      isValid={validTransaction}
+                      ></ATMDeposit>
+                      )}
         </div>
       </form>
     );
